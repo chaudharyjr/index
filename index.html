@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shubham Chaudhary</title>
-<meta name="description" content="Shubham Chaudhary, software engineer. Java, Spring, data structures and algorithms.">
+<meta name="description" content="Shubham Chaudhary, senior backend engineer in Bangalore. Java, Spring Boot, Kafka and distributed systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -48,6 +48,10 @@ h2 { font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .1
 .what .at { color: var(--muted); }
 .what p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
 
+.list { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+.list li { margin: 4px 0; }
+.list li::marker { color: var(--faint); }
+
 .skills { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
 .skills li { font: 400 13px/1 var(--mono); border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; color: var(--muted); }
 
@@ -64,8 +68,8 @@ footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line);
 <main>
   <header>
     <h1>Shubham Chaudhary</h1>
-    <p class="role">Software Engineer · Java</p>
-    <p class="bio">I build backend applications in Java with Spring, Hibernate and JAX-RS, and I like turning designs into clean, working web pages. Lately I'm sharpening my problem solving, one algorithm pattern at a time.</p>
+    <p class="role">Senior Backend Engineer · Bangalore</p>
+    <p class="bio">I build high-scale distributed systems in Java and Spring Boot. At Morgan Stanley I work on real-time global transaction reporting, event-driven microservices and the move from IBM MQ to Kafka, and lately on AI coding agents that do months of migration work in a week.</p>
     <ul class="links">
       <li><a href="mailto:shubham03@outlook.com">email</a></li>
       <li><a href="https://github.com/chaudharyjr">github</a></li>
@@ -85,44 +89,43 @@ footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line);
   <section>
     <h2>Experience</h2>
     <div class="item">
-      <div class="when">2018 –</div>
+      <div class="when">2022 –</div>
       <div class="what">
-        <h3>Systems Engineer <span class="at">· Infosys, Pune</span></h3>
-        <p>ITX developer on the EDI gateway team, building data transformations and extending the team's Java tooling.</p>
+        <h3>Director, Software Engineering III <span class="at">· Morgan Stanley</span></h3>
+        <p>Senior backend engineer on GTRS, a distributed system for real-time global transaction reporting. Led the replatforming of inter-service messaging from IBM MQ to Apache Kafka, and built an AI coding agent with Claude and Codex that turned a 6-month, 168-PR migration into a one-week, single-PR change. Delivered ASIC, MAS, JFSA, CSA3 and HKMA2 regulatory mandates.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">2021 – 2022</div>
+      <div class="what">
+        <h3>Software Engineer <span class="at">· NatWest Group</span></h3>
+        <p>Built features for the Anti-Bribery &amp; Corruption portals in Spring Boot and Oracle SQL, and raised code coverage to 85% with SonarQube.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">2018 – 2021</div>
+      <div class="what">
+        <h3>Senior Systems Engineer <span class="at">· Infosys</span></h3>
+        <p>Built the backend of the ESDS Payload Generator with Spring Boot and Spring Data JPA, cutting payload generation time by more than 75%.</p>
       </div>
     </div>
     <div class="item">
       <div class="when">2017</div>
       <div class="what">
-        <h3>Intern <span class="at">· Bharti Airtel, Gurgaon</span></h3>
-        <p>Configured Oracle Fusion HCM benefits, ran user acceptance testing and wrote the configuration workbook.</p>
+        <h3>Software Engineer Intern <span class="at">· Bharti Airtel</span></h3>
+        <p>Configured the Oracle Fusion Benefits module in a live environment.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Projects</h2>
-    <div class="item">
-      <div class="when">2019</div>
-      <div class="what">
-        <h3><a href="https://github.com/chaudharyjr/restful-web-messenger">restful-web-messenger</a></h3>
-        <p>REST service with Jersey (JAX-RS) and Maven for CRUD over a database.</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="when">2019</div>
-      <div class="what">
-        <h3><a href="https://github.com/chaudharyjr/spring-mvc-crud">spring-mvc-crud</a></h3>
-        <p>A small CRM built with Spring MVC and Hibernate.</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="when">2017</div>
-      <div class="what">
-        <h3><a href="https://github.com/chaudharyjr/college-festival-website">college-festival-website</a></h3>
-        <p>Front end for a college fest site in HTML, CSS, jQuery and Bootstrap.</p>
-      </div>
-    </div>
+    <h2>Highlights</h2>
+    <ul class="list">
+      <li>AWS Certified Developer – Associate, 2025</li>
+      <li>Promoted twice in three years at Morgan Stanley</li>
+      <li>Google Code Jam 2020, advanced to Round 1B</li>
+      <li>HackerRank 6-star in Problem Solving</li>
+    </ul>
   </section>
 
   <section>
@@ -138,7 +141,7 @@ footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line);
   <section>
     <h2>Toolkit</h2>
     <ul class="skills">
-      <li>Java</li><li>Spring MVC</li><li>Spring AOP</li><li>Hibernate</li><li>JAX-RS</li><li>JDBC</li><li>Maven</li><li>SQL</li><li>HTML &amp; CSS</li><li>Git</li><li>Data Structures &amp; Algorithms</li>
+      <li>Java</li><li>Spring Boot</li><li>Microservices</li><li>Event-driven architecture</li><li>Apache Kafka</li><li>IBM MQ</li><li>AWS</li><li>PostgreSQL</li><li>Snowflake</li><li>SQL</li><li>Concurrency</li><li>Gradle</li><li>Claude &amp; Codex</li>
     </ul>
   </section>
 
