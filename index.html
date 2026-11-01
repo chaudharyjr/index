@@ -1,111 +1,151 @@
-<!doctype "html">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
-	<title>Shubham Chaudhary | Software Engineer</title>
-	<!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!--<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-   <style type="text/css">
-   .topbar{
-   	border-bottom:1px solid #fff; 
-   }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shubham Chaudhary</title>
+<meta name="description" content="Shubham Chaudhary, software engineer. Java, Spring, data structures and algorithms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #fbfbf9; --ink: #16181d; --muted: #646b78; --faint: #9aa0aa;
+  --line: #e4e5e1; --accent: #2f6fdf;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111317; --ink: #e7e9ee; --muted: #9ba2af; --faint: #6c7380; --line: #262a32; --accent: #7ea6ff; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans); }
+main { max-width: 680px; margin: 0 auto; padding: 72px 20px 56px; }
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; text-decoration-thickness: 1px; transition: text-decoration-color .15s, color .15s; }
+a:hover { color: var(--accent); text-decoration-color: currentColor; }
 
-   </style>
+header h1 { font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; margin: 0; line-height: 1.2; }
+header .role { color: var(--muted); margin: 6px 0 20px; }
+header .bio { margin: 0 0 24px; max-width: 58ch; }
+.links { display: flex; flex-wrap: wrap; gap: 6px 20px; padding: 0; margin: 0; list-style: none; font: 400 14px/1.6 var(--mono); }
+.links a { color: var(--muted); }
+.links a:hover { color: var(--accent); }
 
+section { margin-top: 56px; }
+h2 { font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--faint); margin: 0 0 20px; }
+
+.feature { display: block; border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; text-decoration: none; transition: border-color .15s; }
+.feature:hover { border-color: var(--accent); color: inherit; }
+.feature strong { display: block; font-weight: 600; }
+.feature span { color: var(--muted); font-size: 15px; }
+.feature .arrow { color: var(--accent); }
+
+.item { display: grid; grid-template-columns: 120px 1fr; gap: 4px 24px; padding: 14px 0; border-top: 1px solid var(--line); }
+.item:first-of-type { border-top: 0; padding-top: 0; }
+.when { font: 400 13px/1.85 var(--mono); color: var(--faint); }
+.what h3 { font-size: 16px; font-weight: 600; margin: 0; }
+.what .at { color: var(--muted); }
+.what p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+
+.skills { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.skills li { font: 400 13px/1 var(--mono); border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; color: var(--muted); }
+
+footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--faint); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 560px) {
+  main { padding: 48px 16px 40px; }
+  header h1 { font-size: 1.7rem; }
+  .item { grid-template-columns: 1fr; gap: 2px; }
+}
+</style>
 </head>
-<body >
-	<div id="top" class="container-fluid">
-	<div class="container">
-	<div class="row topbar">
-		<div class="col-md-4 col-sm-4 col-xs-9"><h2><a target="openHere" href="about.html">Shubham Chaudhary</a></h2></div>
-		<div class="col-md-8 col-sm-8 hidden-xs" style="margin-top:18px">
-			<div class="col-md-4"></div>
-			<div class="col-md-2 col-sm-3"><h4><a href="#" id="educationIcon">Experience</a></h4></div>
-			<div class="col-md-2 col-sm-3"><h4><a href="#" id="projectsIcon">Projects</a></h4></div>
-			<div class="col-md-2 col-sm-3"><h4><a href="#" id="resumeIcon">Resume</a></h4></div>
-			<div class="col-md-2 col-sm-3"><h4><a href="#" id="contactIcon">Contact</a></h4></div>
-		</div>
-		<div id="dropDown" class="col-xs-3 hidden-sm hidden-md hidden-lg hidden-xl "><h2>&#9776</h2></div>
-	</div>
-	</div>
-	</div>
-	<div id="dropDownMenu" class=" hidden-xs hidden-md hidden-lg hidden-xl hidden-sm">
-		<div class="container-fluid ">
-			<div class="row">
-				<div class="col-xs-12"><h4><a href="#" id="educationIconMobile">Experience</a></h4></div>
-			    <div class="col-xs-12"><h4><a href="#" id="projectsIconMobile">Projects</a></h4></div>
-			    <div class="col-xs-12"><h4><a href="#" id="resumeIconMobile">Resume</a></h4></div>
-			    <div class="col-xs-12"><h4><a href="#" id="contactIconMobile">Contact</a></h4></div>
-		    </div>
-	    </div>
-	</div>
-	<div id="bottom" class="container">
-		<iframe name="openHere" src="about.html"></iframe>
-	</div>
-	<!--Jquery CDN-->
-	<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-  <!--Bootstrap CDN-->
-	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	 <script type="text/javascript">
-	 $("#educationIcon").click(function(){
-	 	$('iframe').attr({"src":"education.html"});
-	 });
-	 $("#projectsIcon").click(function(){
-	 	$('iframe').attr({"src":"projects.html"});
-	 });
-	 $("#resumeIcon").click(function(){
-	 	$('iframe').attr({"src":"resume.html"});
-	 });
-	 $("#contactIcon").click(function(){
-	 	$('iframe').attr({"src":"contact.html"});
-	 });
-	 	 $("#educationIconMobile").click(function(){
-	 	$("#dropDownMenu").fadeOut("slow", function() {
-        $(this).toggleClass("hidden-xs");
-        });
-	 	$('iframe').attr({"src":"education.html"});
-	 });
-	 $("#projectsIconMobile").click(function(){
-	 	$("#dropDownMenu").fadeOut("slow", function() {
-        $(this).toggleClass("hidden-xs");
-        });
-	 	$('iframe').attr({"src":"projects.html"});
-	 });
-	 $("#resumeIconMobile").click(function(){
-	 	$("#dropDownMenu").fadeOut("slow", function() {
-        $(this).toggleClass("hidden-xs");
-        });
-	 	$('iframe').attr({"src":"resume.html"});
-	 });
-	 $("#contactIconMobile").click(function(){
-	 	$("#dropDownMenu").fadeOut("slow", function() {
-        $(this).toggleClass("hidden-xs");
-        });
-        $('iframe').attr({"src":"contact.html"});
-	 	
-	 });
-     $("#dropDown").click(function(){
-     	$("#dropDownMenu").fadeIn("slow", function() {
-        $(this).toggleClass("hidden-xs");
-        });
-     });
-     
-     /*
-     $("#loader").fadeOut("slow", function() {
-    $(this).removeClass("loader");
-});*/
-	 </script>
+<body>
+<main>
+  <header>
+    <h1>Shubham Chaudhary</h1>
+    <p class="role">Software Engineer · Java</p>
+    <p class="bio">I build backend applications in Java with Spring, Hibernate and JAX-RS, and I like turning designs into clean, working web pages. Lately I'm sharpening my problem solving, one algorithm pattern at a time.</p>
+    <ul class="links">
+      <li><a href="mailto:shubham03@outlook.com">email</a></li>
+      <li><a href="https://github.com/chaudharyjr">github</a></li>
+      <li><a href="https://www.linkedin.com/in/cshubh/">linkedin</a></li>
+      <li><a href="R%C3%A9sum%C3%A9.pdf">résumé (pdf)</a></li>
+    </ul>
+  </header>
+
+  <section>
+    <h2>Now</h2>
+    <a class="feature" href="dsa/">
+      <strong>DSA Revision <span class="arrow">→</span></strong>
+      <span>Interactive dry runs of LeetCode solutions in Java, grouped by pattern. Starting with Binary Search.</span>
+    </a>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="item">
+      <div class="when">2018 –</div>
+      <div class="what">
+        <h3>Systems Engineer <span class="at">· Infosys, Pune</span></h3>
+        <p>ITX developer on the EDI gateway team, building data transformations and extending the team's Java tooling.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">2017</div>
+      <div class="what">
+        <h3>Intern <span class="at">· Bharti Airtel, Gurgaon</span></h3>
+        <p>Configured Oracle Fusion HCM benefits, ran user acceptance testing and wrote the configuration workbook.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="item">
+      <div class="when">2019</div>
+      <div class="what">
+        <h3><a href="https://github.com/chaudharyjr/restful-web-messenger">restful-web-messenger</a></h3>
+        <p>REST service with Jersey (JAX-RS) and Maven for CRUD over a database.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">2019</div>
+      <div class="what">
+        <h3><a href="https://github.com/chaudharyjr/spring-mvc-crud">spring-mvc-crud</a></h3>
+        <p>A small CRM built with Spring MVC and Hibernate.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">2017</div>
+      <div class="what">
+        <h3><a href="https://github.com/chaudharyjr/college-festival-website">college-festival-website</a></h3>
+        <p>Front end for a college fest site in HTML, CSS, jQuery and Bootstrap.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="item">
+      <div class="when">2014 – 2018</div>
+      <div class="what">
+        <h3>B.Tech, Computer Science <span class="at">· UIET, Kurukshetra University</span></h3>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Toolkit</h2>
+    <ul class="skills">
+      <li>Java</li><li>Spring MVC</li><li>Spring AOP</li><li>Hibernate</li><li>JAX-RS</li><li>JDBC</li><li>Maven</li><li>SQL</li><li>HTML &amp; CSS</li><li>Git</li><li>Data Structures &amp; Algorithms</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>© Shubham Chaudhary</span>
+    <a href="mailto:shubham03@outlook.com">shubham03@outlook.com</a>
+  </footer>
+</main>
 </body>
 </html>
